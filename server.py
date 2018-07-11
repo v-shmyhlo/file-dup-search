@@ -4,7 +4,7 @@ from aiohttp import web
 import file_duplicate
 
 STORAGE = './search-storage.json'
-SEARCH_PATH = '/Users/v-shmyhlo/Dropbox'
+SEARCH_PATH = '/'
 
 
 def load_search_results(path):
@@ -16,7 +16,7 @@ def load_search_results(path):
 
 
 def save_search_results(result, path):
-    with open(path) as f:
+    with open(path, 'w') as f:
         json.dump(result, f)
 
 
